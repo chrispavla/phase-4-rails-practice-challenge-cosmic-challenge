@@ -30,6 +30,11 @@ group :development do
   gem 'foreman', '~> 0.87'
 end
 
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
 group :test do
   gem 'rspec-json_expectations'
   gem 'shoulda-matchers', '~> 4.0'
@@ -38,3 +43,4 @@ end
 gem "faker", "~> 2.20"
 
 gem "active_model_serializers", "~> 0.10.13"
+gem 'hirb'
